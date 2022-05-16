@@ -1,4 +1,4 @@
-ThisBuild / version := "0.2.0-SNAPSHOT"
+ThisBuild / version := "0.3.0-SNAPSHOT"
 
 ThisBuild / scalaVersion := "2.12.8"
 ThisBuild / organization := "adam"
@@ -23,6 +23,7 @@ docker / dockerfile := {
     from("spark:v3.2.1")
     add(jarFile, jarTarget)
     user("root")
-    entryPoint("/opt/spark/bin/spark-submit", "--conf", "spark.jars.ivy=/tmp/.ivy", jarTarget)
+  //wywalamy entrypoint jesli cecmy by dzialalo w kubernetesie
+   // entryPoint("/opt/spark/bin/spark-submit", "--conf", "spark.jars.ivy=/tmp/.ivy", jarTarget)
   }
 }
