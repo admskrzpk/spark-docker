@@ -9,7 +9,7 @@ The goal of this project is to test how to dockerize simple Spark app using sbt 
 App itself just loading and displaying files from a directory.
 ****
 
-.Tools
+=.Tools
 
 https://spark.apache.org/[Apache Spark] +
 https://github.com/marcuslonnberg/sbt-docker[sbt docker]
