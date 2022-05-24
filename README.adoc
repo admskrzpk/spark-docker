@@ -1,7 +1,41 @@
-Dockerized Spark App
-## Create a dockerized Spark application that loads files from one or more directories
+= Dockerized Spark App Example
+================================================
 
-Launch docker container with command with mount:
-```text
+
+.Why?
+****
+The goal of this project is to show how to dockerize simple Spark app using sbt docker plugin. +
+
+App itself just loading and displaying files from a directory.
+****
+
+.Tools
+
+* Apache Spark https://spark.apache.org/
+* sbt Docker https://github.com/marcuslonnberg/sbt-docker
+
+.How to build project & run
+* Build project using sbt Docker
+[source,text]
+----
+sbt docker
+----
+* In your command line terminal go to working directory and pass command. Example:
+[source,text]
+----
 docker run -v /home/admskrzpk/spark-3.2.1-bin-hadoop3.2:/tmp/adam/ adam/spark-docker /tmp/adam/README.md
-```
+----
+
+.Troubleshooting
+* Make sure that your project does not contain outdated project files using:
+[source, text]
+----
+sbt clean
+----
+
+* Make sure that correct dependencies are added to your build.sbt file:
+
+[source,scala]
+----
+libraryDependencies += "org.apache.spark" %% "spark-sql" % "3.2.1" % "provided"
+----
