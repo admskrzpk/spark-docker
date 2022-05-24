@@ -6,7 +6,7 @@
 ****
 The goal of this project is to test how to dockerize simple Spark app using sbt docker plugin. +
 
-App itself just loading and displaying files from a directory.
+App itself just loading and displaying files from a local directory.
 ****
 
 == Tools
