@@ -1,2 +1,0 @@
-- name: Generate and Commit PlantUML Diagrams
-  uses: abekoh/commit-plantuml-action@1.0.1
