@@ -2,7 +2,7 @@
 ================================================
 
 
-.Why?
+== Why?
 ****
 The goal of this project is to test how to dockerize simple Spark app using sbt docker plugin. +
 
