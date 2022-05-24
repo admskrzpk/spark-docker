@@ -9,26 +9,28 @@ The goal of this project is to test how to dockerize simple Spark app using sbt 
 App itself just loading and displaying files from a directory.
 ****
 
-.Tools
+== Tools
 
 https://spark.apache.org/[Apache Spark] +
 https://github.com/marcuslonnberg/sbt-docker[sbt docker]
 
-.How to build project & run
-Clone and import project to Idea Intelij. Other IDE's not tested.
+== How to build project & run
+* Clone and import project to Idea Intelij. Other IDE's not tested.
 
-Build project using sbt Docker
+* Add path to folder as a command line argument  to the app which contains files (or hardcoded one) to display
+
+* Build project using sbt Docker
 [source,text]
 ----
 sbt docker
 ----
-In your command line terminal go to working directory and pass command. Example:
+* In your command line terminal go to working directory and pass command. Example:
 [source,text]
 ----
 docker run -v /home/admskrzpk/spark-3.2.1-bin-hadoop3.2:/tmp/adam/ adam/spark-docker /tmp/adam/README.md
 ----
 
-.Troubleshooting
+== Troubleshooting
 Make sure that your project does not contain outdated project files using:
 [source, text]
 ----
