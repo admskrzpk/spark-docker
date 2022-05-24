@@ -2,9 +2,7 @@
 ================================================
 
 
-
-
-== Why?
+== Project desribtion
 ****
 The goal of this project is to test how to dockerize simple Spark app using sbt docker plugin. +
 
@@ -19,7 +17,7 @@ https://github.com/marcuslonnberg/sbt-docker[sbt docker]
 == How to build project & run
 * Clone and import project to Idea Intelij. Other IDE's not tested.
 
-* Add path to data directory as a command line argument  to the app which contains files (or hardcoded one) to display
+* Add path to folder as a command line argument  to the app which contains files (or hardcoded one) to display
 
 * Build project using sbt Docker
 
